@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA 6 Release Countdown - Official Live Timer</title>
+    <meta name="description" content="Live countdown to GTA VI release date on November 19, 2026. Pre-order link and latest news.">
+    
+    <!-- SEO Language Links -->
+    <link rel="alternate" hreflang="en" href="./" />
+    <link rel="alternate" hreflang="fr" href="./fr/" />
+    <link rel="alternate" hreflang="x-default" href="./" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #0f0c20; color: #ffffff; text-align: center; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .lang-switch { text-align: right; margin-bottom: 15px; }
+        .lang-switch a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; font-weight: bold; background: rgba(255,255,255,0.08); padding: 6px 12px; border-radius: 20px; transition: 0.2s; }
+        .lang-switch a:hover { color: #00f2fe; background: rgba(255,255,255,0.15); }
+        h1 { font-size: 2.5rem; margin-top: 10px; background: linear-gradient(45deg, #ff007f, #7928ca); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; letter-spacing: 2px; }
+        p.subtitle { color: #a0a0b0; margin-bottom: 25px; }
+        .countdown { display: flex; justify-content: center; gap: 15px; margin: 25px 0; }
+        .time-box { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 12px; min-width: 80px; }
+        .time-box span { display: block; font-size: 2.5rem; font-weight: bold; color: #00f2fe; }
+        .time-box label { font-size: 0.8rem; color: #8a8a9e; text-transform: uppercase; }
+        .btn-affiliate { display: inline-block; background: linear-gradient(90deg, #ff007f, #7928ca); color: #fff; padding: 15px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 30px; margin: 20px 0; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); transition: transform 0.2s; }
+        .btn-affiliate:hover { transform: scale(1.05); }
+        .ad-slot { background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(255, 255, 255, 0.2); padding: 10px; margin: 20px 0; min-height: 90px; display: flex; align-items: center; justify-content: center; color: #555; font-size: 0.8rem; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin: 25px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        @media (max-width: 600px) {
+            .countdown { gap: 8px; }
+            .time-box { min-width: 60px; padding: 10px; }
+            .time-box span { font-size: 1.8rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+
+    <!-- [ADS] POPUNDER / PUSH SCRIPT SLOT -->
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="lang-switch">
+            <a href="./fr/">🇫🇷 Version Française</a>
+        </div>
+
+        <h1>GTA VI Countdown</h1>
+        <p class="subtitle">Time remaining until official release (November 19, 2026)</p>
+
+        <!-- [ADS] TOP BANNER SLOT -->
+        <div class="ad-slot">
+            <!-- PASTE BANNER SCRIPT HERE -->
+            [ AD BANNER TOP ]
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown">
+            <div class="time-box"><span id="days">00</span><label>Days</label></div>
+            <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+            <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+            <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+
+        <!-- AFFILIATE BUTTON -->
+        <a href="YOUR_AFFILIATE_LINK" class="btn-affiliate" target="_blank" rel="nofollow">
+            🎮 Pre-Order GTA 6 Best Price
+        </a>
+
+        <!-- YOUTUBE VIDEO -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/QdBZY2fkU-0" allowfullscreen></iframe>
+        </div>
+
+        <!-- [ADS] BOTTOM BANNER SLOT -->
+        <div class="ad-slot">
+            <!-- PASTE BANNER SCRIPT HERE -->
+            [ AD BANNER BOTTOM ]
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date("November 19, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            } else {
+                document.querySelector(".countdown").innerHTML = "<h2>GAME RELEASED!</h2>";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
